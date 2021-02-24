@@ -28,7 +28,7 @@ class recvMsg(threading.Thread):
 
         while True:
             data = sock.recvfrom(1024)
-            msg = pickle.loads(msg[0], fix_imports=True, encoding="bytes")
+            msg = pickle.loads(data[0], fix_imports=True, encoding="bytes")
             print(msg)
 
 threadSend = sendMsg()
