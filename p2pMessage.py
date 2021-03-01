@@ -24,7 +24,7 @@ class recvMsg(threading.Thread):
         threading.Thread.__init__(self)
     def run(self):
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.bind(('', 54000))
+        sock.bind(('127.0.0.1', 54000))
 
         while True:
             data = sock.recvfrom(1024)
